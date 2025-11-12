@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Europe Trip Guide: Munich → Vienna → Berlin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+        
+        .city-section {
+            page-break-inside: avoid;
+            margin-bottom: 40px;
+        }
+        
+        .city-header {
+            background: linear-gradient(to right, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 30px 40px;
+            margin-top: 40px;
+        }
+        
+        .city-header h2 {
+            font-size: 2.2em;
+            margin-bottom: 5px;
+        }
+        
+        .city-header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .day {
+            margin-bottom: 40px;
+            page-break-inside: avoid;
+        }
+        
+        .day-title {
+            background: #667eea;
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.4em;
+            font-weight: 600;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .activity {
+            margin-bottom: 30px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .activity-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .activity-content {
+            padding: 25px;
+        }
+        
+        .activity h4 {
+            color: #667eea;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+        
+        .activity p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .tip {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .tip strong {
+            color: #856404;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .dining {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .dining strong {
+            color: #155724;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .travel-section {
+            background: #e3f2fd;
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 8px;
+            border: 2px solid #2196f3;
+            page-break-inside: avoid;
+        }
+        
+        .travel-section h3 {
+            color: #1976d2;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .travel-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .travel-detail {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        
+        .travel-detail strong {
+            color: #1976d2;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .link:hover {
+            text-decoration: underline;
+        }
+        
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            .city-section {
+                page-break-after: always;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 40px 20px;
+            }
+            .header h1 {
+                font-size: 1.8em;
+            }
+            .content {
+                padding: 20px;
+            }
+            .city-header {
+                padding: 20px;
+            }
+            .city-header h2 {
+                font-size: 1.6em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✈️ Europe Adventure</h1>
+            <p>Munich → Vienna → Berlin | 9 Days of Discovery</p>
+        </div>
+
+        <!-- MUNICH SECTION -->
+        <div class="city-section">
+            <div class="city-header">
+                <h2>🏔️ Munich</h2>
+                <p>Bavarian charm, beer gardens & fairy-tale castles</p>
+            </div>
+            
+            <div class="content">
+                <div class="day">
+                    <div class="day-title">Day 1: Historic Munich & Beer Culture</div>
+                    
+                    <div class="activity">
+                        <img src="https://images.unsplash.com/photo-1595867818082-083862f3d630?w=1200&h=800&fit=crop" alt="Marienplatz" class="activity-image">
+                        <div class="activity-content">
+                            <h4>Morning: Marienplatz & Old Town</h4>
+                            <p>Start at the heart of Munich with the iconic <a href="https://www.muenchen.de/int/en/sights/marienplatz" class="link" target="_blank">Marienplatz</a>. Watch the famous Glockenspiel at 11am or noon. Explore the Gothic New Town Hall and stroll through the charming pedestrian streets.</p>
+                            <div class="tip">
+                                <strong>💡 Local Tip:</strong>
+                                Arrive at Marienplatz 10 minutes before the Glockenspiel to get a good viewing spot. The show lasts about 15 minutes.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="activity">
+                        <img src="https://images.unsplash.com/photo-1618492036521-61150fc33e93?w=1200&h=800&fit=crop" alt="Hofbräuhaus" class="activity-image">
+                        <div class="activity-content">
+                            <h4>Afternoon: Hofbräuhaus Experience</h4>
+                            <p>Visit the world-famous <a href="https://www.hofbraeuhaus.de/en" class="link" target="_blank">Hofbräuhaus</a> beer hall, established in 1589. Experience traditional Bavarian culture with live oompah music, hearty food, and locally brewed beer.</p>
+                            <div class="dining">
+                                <strong>🍽️ Must-Try:</strong>
+                                Order the Schweinshaxe (roasted pork knuckle) and a Mass (1-liter) of Hofbräu beer. Don't skip the Apfelstrudel for dessert!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day">
+                    <div class="day-title">Day 2: Day Trip to Neuschwanstein Castle</div>
+                    
+                    <div class="activity">
+                        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1200&h=800&fit=crop" alt="Neuschwanstein Castle" class="activity-image">
+                        <div class="activity-content">
+                            <h4>Full Day: Fairy-Tale Castle Adventure</h4>
+                            <p>Take an early train or bus to <a href="https://www.neuschwanstein.de/englisch/tourist/index.htm" class="link" target="_blank">Neuschwanstein Castle</a>, the inspiration for Disney's Sleeping Beauty Castle. Book tickets online in advance! The 2-hour journey from Munich is scenic.</p>
+                            <div class="tip">
+                                <strong>💡 Travel Tip:</strong>
+                                Take the Bayern-Ticket for unlimited regional train travel (€27 for one person, €8 for each additional person). Departs from Munich Hauptbahnhof to Füssen, then bus to castle.
+                            </div>
+                            <p>After touring the castle, hike to Marienbrücke (Mary's Bridge) for the iconic postcard view. Visit nearby Hohenschwangau Castle if time permits.</p>
+                            <div class="dining">
+                                <strong>🍽️ Dining:</strong>
+                                Grab lunch at Schlossbrauhaus in Schwangau for traditional Bavarian dishes with a view of the Alps.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day">
+                    <div class="day-title">Day 3: English Garden & Museums</div>
+                    
+                    <div class="activity">
+                        <img src="https://images.unsplash.com/photo-1609766975828-670373e0fda4?w=1200&h=800&fit=crop" alt="English Garden" class="activity-image">
+                        <div class="activity-content">
+                            <h4>Morning: English Garden & River Surfing</h4>
+                            <p>Explore one of the world's largest urban parks, the <a href="https://www.muenchen.de/en/sights/english-garden" class="link" target="_blank">English Garden</a>. Watch surfers ride the standing wave at Eisbach. Relax at the Chinese Tower beer garden with 7,000 seats!</p>
+                            <div class="tip">
+                                <strong>💡 Local Secret:</strong>
+                                Bring cash for the beer garden (card not accepted) and grab a pretzel from vendors. You can bring your own food but must buy drinks.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="activity">
+                        <img src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=1200&h=800&fit=crop" alt="Museum" class="activity-image">
+                        <div class="activity-content">
+                            <h4>Afternoon: Museum Quarter</h4>
+                            <p>Choose from world-class museums: <a href="https://www.pinakothek.de/en" class="link" target="_blank">Alte Pinakothek</a> for Old Masters, Deutsches Museum for science/technology, or BMW Museum for car enthusiasts.</p>
+                            <div class="dining">
+                                <strong>🍽️ Evening:</strong>
+                                End your Munich stay at Viktualienmarkt food market, then enjoy dinner at Augustiner-Bräu, Munich's oldest brewery.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TRAVEL TO VIENNA -->
+                <div class="travel-section">
+                    <h3>🚆 Munich → Vienna</h3>
+                    <p>Comfortable train journey through stunning Alpine scenery</p>
+                    <div class="travel-details">
+                        <div class="travel-detail">
+                            <strong>Duration:</strong>
+                            4 hours direct
+                        </div>
+                        <div class="travel-detail">
+                            <strong>Train:</strong>
+                            ÖBB Railjet (hourly departures)
+                        </div>
+                        <div class="travel-detail">
+                            <strong>Cost:</strong>
+                            From €29 (book early via <a href="https://www.oebb.at/en" class="link" target="_blank">ÖBB</a>)
+                        </div>
+                        <div class="travel-detail">
+                            <strong>Tip:</strong>
+                            Book window seat for Alpine views!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIENNA SECTION -->
+        <div class="city-section">
+            <div class="city-header">
+                <h2>👑 Vienna</h2>
+                <p>Imperial elegance, classical music & coffee culture</p>
+            </div>
+            
+            <div class="content">
+                <div class="day">
+                    <div class="day-title">Day 4: Imperial Vienna</div>
+                    
+                    <div class="activity">
+                        <img src="https://images.unsplash.com/photo-1609856878074-cf31e21ccb6b?w=1200&h=800&fit=crop" alt="Schönbrunn Palace" class="activity-image">
+                        <div class="activity-content">
+                            <h4>Morning: Schönbrunn Palace</h4>
+                            <p>Visit the magnificent <a href="https://www.schoenbrunn.at/en/" class="link" target="_blank">Schönbrunn Palace</a>, summer residence of the Habsburgs. Book the Grand Tour (40 rooms) online. Stroll through the stunning baroque gardens and climb to the Gloriette for panoramic views.</p>
+                            <div class="tip">
+                                <strong>💡 Booking Tip:</strong>
+                                Purchase skip-the-line tickets online. Arrive when it opens (8:30am) to avoid crowds. Allow 3-4 hours total.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="activity">
+                        <img src="https://images.unsplash.com/photo-1516550893923-42d28e5677af?w=1200&h=800&fit=crop" alt="Vienna City Center" class="activity-image">
+                        <div class="activity-content">
+                            <h4>Afternoon: Historic City Center</h4>
+                            <p>Explore the UNESCO-listed <a href="https://www.wien.info/en/sightseeing/sights/imperial/st-stephen-s-cathedral-354648" class="link" target="_blank">St. Stephen's Cathedral</a>, climb the South Tower for city views. Walk down Kärntner Strasse, Vienna's main shopping boulevard.</p>
+                            <div class="dining">
+                                <strong>🍽️ Café Culture:</strong>
+                                Experience a traditional Viennese coffee house: Café Central or Café Sacher. Order Sachertorte (chocolate cake) and a Melange (Viennese cappuccino).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day">
+                    <div class="day-title">Day 5: Art & Music</div>
+                    
+                    <div class="activity">
+                        <img src="https://images.unsplash.com/photo-1590764258165-a8e94d6b1d95?w=1200&h=800&fit=crop" alt="Belvedere Palace" class="activity-image">
+                        <div class="activity-content">
+                            <h4>Morning: Belvedere Palace & Klimt</h4>
+                            <p>Visit <a href="https://www.belvedere.at/en" class="link" target="_blank">Belvedere Palace</a> to see Gustav Klimt's masterpiece "The Kiss" and other Austrian art treasures. The Upper Belvedere houses the main collection with stunning baroque architecture.</p>
+                            <div class="tip">
+                                <strong>💡 Art Lover's Tip:</strong>
+                                Buy tickets online to skip queues. The gardens between Upper and Lower Belvedere are free and offer great palace views.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="activity">
+                        <img src="https://images.unsplash.com/photo-1580809361436-42a7ec204889?w=1200&h=800&fit=crop" alt="Vienna Opera House" class="activity-image">
+                        <div class="activity-content">
+                            <h4>Afternoon: Hofburg & Opera</h4>
+                            <p>Tour the <a href="https://www.hofburg-wien.at/en/" class="link" target="_blank">Hofburg Palace</a>, winter residence of Habsburgs. Visit the Imperial Apartments and Sisi Museum. End at the <a href="https://www.wiener-staatsoper.at/en/" class="link" target="_blank">Vienna State Opera</a> for a guided tour or standing-room performance.</p>
+                            <div class="dining">
+                                <strong>🍽️ Dinner:</strong>
+                                Try Plachutta for authentic Tafelspitz (boiled beef) or visit Naschmarkt for diverse food stalls and restaurants.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day">
+                    <div class="day-title">Day 6: Vienna's Alternative Side</div>
+                    
+                    <div class="activity">
+                        <img src="https://images.unsplash.com/photo-1588439683082-1c5a89004b2d?w=1200&h=800&fit=crop" alt="Prater" class="activity-image">
+                        <div class="activity-content">
+                            <h4>Morning: Prater Park & Ferris Wheel</h4>
+                            <p>Ride the iconic <a href="https://www.praterwien.com/en/" class="link" target="_blank">Wiener Riesenrad</a> (Giant Ferris Wheel) from 1897. Explore the vast Prater park, popular with locals for jogging, picnics, and relaxation.</p>
+                            <div class="tip">
+                                <strong>💡 Local Spot:</strong>
+                                Walk through the Prater's wooded areas to escape tourist crowds. Free entry to the park; only rides cost money.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="activity">
+                        <img src="https://images.unsplash.com/photo-1560155989-1774e5e45d1e?w=1200&h=800&fit=crop" alt="Hundertwasser House" class="activity-image">
+                        <div class="activity-content">
+                            <h4>Afternoon: Hundertwasser & MuseumsQuartier</h4>
+                            <p>See the quirky <a href="https://www.wien.info/en/sightseeing/sights/from-a-to-z/hundertwasser-house-354594" class="link" target="_blank">Hundertwasserhaus</a> residential building. Spend the afternoon at <a href="https://www.mqw.at/en/" class="link" target="_blank">MuseumsQuartier</a>, one of the world's largest cultural complexes with modern art museums and cafés.</p>
+                            <div class="dining">
+                                <strong>🍽️ Evening Snack:</strong>
+                                Grab a Würstelstand sausage (Käsekrainer is local favorite) with mustard and bread roll. Perfect late-night snack!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TRAVEL TO BERLIN -->
+                <div class="travel-section">
+                    <h3>🚆 Vienna → Berlin</h3>
+                    <p>Direct high-speed train through Czech countryside</p>
+                    <div class="travel-details">
+                        <div class="travel-detail">
+                            <strong>Duration:</strong>
+                            4 hours 15 minutes
+                        </div>
+                        <div class="travel-detail">
+                            <strong>Train:</strong>
+                            ÖBB Railjet (multiple daily)
+                        </div>
+                        <div class="travel-detail">
+                            <strong>Cost:</strong>
+                            From €39 via <a href="https://www.oebb.at/en" class="link" target="_blank">ÖBB</a>
+                        </div>
+                        <div class="travel-detail">
+                            <strong>Tip:</strong>
+                            Early morning trains arrive by lunch!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BERLIN SECTION -->
+        <div class="city-section">
+            <div class="city-header">
+                <h2>🏛️ Berlin</h2>
+                <p>Modern history, vibrant culture & street art</p>
+            </div>
+            
+            <div class="content">
+                <div class="day">
+                    <div class="day-title">Day 7: Historical Berlin</div>
+                    
+                    <div class="activity">
+                        <img src="https://images.unsplash.com/photo-1560969184-10fe8719e047?w=1200&h=800&fit=crop" alt="Brandenburg Gate" class="activity-image">
+                        <div class="activity-content">
+                            <h4>Morning: Brandenburg Gate & Reichstag</h4>
+                            <p>Start at the iconic <a href="https://www.visitberlin.de/en/brandenburg-gate" class="link" target="_blank">Brandenburg Gate</a>. Walk to the glass-domed <a href="https://www.bundestag.de/en/visittheBundestag" class="link" target="_blank">Reichstag</a> (book free visit in advance). Don't miss the Holocaust Memorial nearby.</p>
+                            <div class="tip">
+                                <strong>💡 Important:</strong>
+                                Register for Reichstag dome visit 2-3 days in advance online. Bring passport/ID for security check. The sunset visit is most spectacular!
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="activity">
+                        <img src="https://images.unsplash.com/photo-1599946347371-68eb71b16afc?w=1200&h=800&fit=crop" alt="Museum Island" class="activity-image">
+                        <div class="activity-content">
+                            <h4>Afternoon: Museum Island</h4>
+                            <p>Explore UNESCO-listed <a href="https://www.museumsinsel-berlin.de/en/" class="link" target="_blank">Museum Island</a>. The Pergamon Museum and Neues Museum (with Nefertiti bust) are must-visits. One museum ticket is €12, day pass €18.</p>
+                            <div class="dining">
+                                <strong>🍽️ Dinner:</strong>
+                                Try authentic Currywurst at Curry 36 or Konnopke's Imbiss. For sit-down dining, head to Hackescher Markt area.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day">
+                    <div class="day-title">Day 8: Berlin Wall & Alternative Culture</div>
+                    
+                    <div class="activity">
+                        <img src="https://images.unsplash.com/photo-1587330979470-3595ac045ab0?w=1200&h=800&fit=crop" alt="East Side Gallery" class="activity-image">
+                        <div class="activity-content">
+                            <h4>Morning: East Side Gallery & Berlin Wall</h4>
+                            <p>Walk along the <a href="https://www.eastsidegallery-berlin.de/en/" class="link" target="_blank">East Side Gallery</a>, the longest remaining Berlin Wall section covered in vibrant murals. Visit the <a href="https://www.berliner-mauer-gedenkstaette.de/en/" class="link" target="_blank">Berlin Wall Memorial</a> for historical context.</p>
+                            <div class="tip">
+                                <strong>💡 Photo Spot:</strong>
+                                The "Fraternal Kiss" mural is the most famous. Visit early morning (before 9am) to avoid crowds for photos.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="activity">
+                        <img src="https://images.unsplash.com/photo-1574291884371-f41a2daa5e5e?w=1200&h=800&fit=crop" alt="Kreuzberg Street Art" class="activity-image">
+                        <div class="activity-content">
+                            <h4>Afternoon: Kreuzberg & Street Art</h4>
+                            <p>Explore the bohemian <a href="https://www.visitberlin.de/en/kreuzberg" class="link" target="_blank">Kreuzberg</a> neighborhood. Discover street art, vintage shops, and multicultural food scene. Don't miss the Turkish Market on Tuesdays and Fridays.</p>
+                            <div class="dining">
+                                <strong>🍽️ Food Scene:</strong>
+                                Markthalle Neun for gourmet street food (Thursday Street Food Thursdays are legendary). Try döner kebab at Mustafa's Gemüse Kebap (expect queues!).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day">
+                    <div class="day-title">Day 9: Modern Berlin & Departure</div>
+                    
+                    <div class="activity">
+                        <img src="https://images.unsplash.com/photo-1591799265444-d66432b91588?w=1200&h=800&fit=crop" alt="Berlin TV Tower" class="activity-image">
+                        <div class="activity-content">
+                            <h4>Morning: Alexanderplatz & TV Tower</h4>
+                            <p>Visit <a href="https://www.tv-turm.de/en/" class="link" target="_blank">Fernsehturm</a> (TV Tower) at Alexanderplatz for 360° views at 203m height. Book timed tickets online. Shop at nearby Alexa mall or explore trendy Rosenthaler Platz.</p>
+                            <div class="tip">
+                                <strong>💡 Shopping:</strong>
+                                Kurfürstendamm (Ku'damm) for luxury brands, Friedrichstrasse for department stores, or Prenzlauer Berg flea markets for unique finds.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="activity">
+                        <img src="https://images.unsplash.com/photo-1566404791232-af9fe0ae8f8b?w=1200&h=800&fit=crop" alt="Berlin Cafe" class="activity-image">
+                        <div class="activity-content">
+                            <h4>Afternoon: Final Moments & Departure</h4>
+                            <p>Relax at <a href="https://www.visitberlin.de/en/tiergarten-park" class="link" target="_blank">Tiergarten Park</a> before departure. Grab coffee in trendy Mitte or Prenzlauer Berg. Berlin has excellent airport connections via S-Bahn and buses.</p>
+                            <div class="dining">
+                                <strong>🍽️ Farewell Meal:</strong>
+                                If time permits, try traditional German lunch at Zur Letzten Instanz (Berlin's oldest restaurant since 1621) or modern fusion at restaurants around Gendarmenmarkt.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="travel-section">
+                    <h3>✈️ Departure from Berlin</h3>
+                    <p>Berlin has two airports with excellent connections worldwide</p>
+                    <div class="travel-details">
+                        <div class="travel-detail">
+                            <strong>Airport:</strong>
+                            Berlin Brandenburg (BER)
+                        </div>
+                        <div class="travel-detail">
+                            <strong>From City:</strong>
+                            30-45 minutes via Airport Express train or S-Bahn
+                        </div>
+                        <div class="travel-detail">
+                            <strong>Cost:</strong>
+                            €3.80 ABC ticket
+                        </div>
+                        <div class="travel-detail">
+                            <strong>Tip:</strong>
+                            Allow extra time for international flights!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h3>📋 Essential Travel Tips</h3>
+            <p><strong>Currency:</strong> Euro (€) in all three countries</p>
+            <p><strong>Language:</strong> German (English widely spoken in tourist areas)</p>
+            <p><strong>Best Time:</strong> May-September for weather; December for Christmas markets</p>
+            <p><strong>Transport:</strong> Get the <a href="https://www.interrail.eu/" class="link" target="_blank">Eurail Pass</a> for flexible train travel</p>
+            <p><strong>Apps:</strong> Google Maps, DB Navigator (trains), Citymapper (Berlin)</p>
+            <p style="margin-top: 20px; opacity: 0.8;">Bon voyage! 🎒</p>
+        </div>
+    </div>
+</body>
+</html>
